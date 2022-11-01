@@ -37,27 +37,27 @@
                 <legend>Tus datos</legend>
                 <div class="campo"> <!-- Colocamos dentro del div para que su acomodo sea block -->
                     <label for="nombre">Nombre: </label> 
-                    <input id="nombre" type="text" placeholder="Nombre"/>
+                    <input id="nombre" type="text" placeholder="Nombre" required/>
                 </div>
 
                 <div class="campo">
                     <label for="asunto">Asunto:</label>
-                    <input id="asunto" type="text"  placeholder="Asunto">
+                    <input id="asunto" type="text"  placeholder="Asunto" required>
                 </div>
 
                 <div class="campo">
                     <label for="email">Correo:</label>
-                    <input id="email" type="email" placeholder="Correo">
+                    <input id="email" type="email" placeholder="Correo" required>
                 </div>
 
                 <div class="campo">
                     <label for="telefono">Teléfono:</label>
-                    <input id="telefono" type="tel" placeholder="Teléfono">
+                    <input id="telefono" type="tel" placeholder="Teléfono" required>
                 </div>
 
                 <div class="campo">
                     <label for="telefono">Mensaje:</label>
-                    <textarea rows="10" cols="50"> Deja tu mensaje </textarea>
+                    <textarea rows="10" cols="50" required> Deja tu mensaje </textarea>
                 </div>
             </fieldset>
 
@@ -78,8 +78,33 @@
             </fieldset>
 
             <fieldset>
-                <legend>Método de Pago</legend>
+                <legend>Información adicional</legend>
+
+                    <div class="campo">
+                        <label for="cliente">Cliente</label>
+                        <input id="cliente" type="radio" name="tipo" value="cliente">
+                    </div>
+
+                    <div class="campo">
+                        <label for="proveedor">Proveedor</label>
+                        <input id="proveedor" type="radio" name="tipo" value="proveedor">
+                    </div>
+
+                    <div class="campo">
+                        <label for="categoria">Categoria de interés</label>
+                        <input list="categorias" name="categorias">
+                        <datalist id="categorias">
+                            <option value="Cocina">
+                            <option value="Exterior">
+                            <option value="Dormitorio">
+                            <option value="Sala de estar">
+                            <option value="Regadera">
+                        </datalist>
+                    </div>
+
             </fieldset>
+
+            <input class="btn" type="submit" value="Enviar Formulario">
 
         </form>
     </main>
